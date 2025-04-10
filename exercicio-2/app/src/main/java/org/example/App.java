@@ -18,6 +18,11 @@ public class App {
             double multiplicador = get_multiplicador(cor3);
             double tolerancia = get_tolerancia(cor4);
 
+        if (faixa1 == -1 || faixa2 == -1 || multiplicador == 0) {
+            System.out.println("Erro: uma ou mais cores são inválidas.");
+            return;
+        }
+
             double resistencia = (faixa1 * 10 + faixa2) * multiplicador;
 
             System.out.print("Resistência: " + resistencia + " Ohms");
@@ -40,8 +45,8 @@ public class App {
             case "cinza":   return 8;
             case "branco":  return 9;
             default:
-                System.out.println("Cor '" + cor + "' não pode ser usada como dígito");
-                return 0;
+                System.out.println("A cor '" + cor + "' é inválida");
+                return -1;
         }
     }
 
@@ -60,8 +65,8 @@ public class App {
             case "dourado": return 0.1;
             case "prateado": return 0.01;
             default:
-                System.out.println("Cor '" + cor + "' inválida para multiplicador");
-                return 0;
+                System.out.println("A cor '" + cor + "' inválida para multiplicador");
+                return -1;
         }
     }
 
