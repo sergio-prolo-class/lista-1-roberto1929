@@ -9,3 +9,16 @@
 - [X] Exercício 2;
 - [X] Exercício 3;
 - [ ] Exercício 4.
+
+### Exercício 1
+
+### Exercício 2
+
+### Exercício 3
+Como executar: gradle run
+### Exercício 4
+
+- Conferir a dimensão do mapa (10x10)
+- Conferir se há os 5 navios presentes sendo um de cada tipo
+- Conferir se tem mais de um tipo de navio do mesmo tipo
+- Conferir se os navios se sobrepõem no mapa (linha e coluna)
