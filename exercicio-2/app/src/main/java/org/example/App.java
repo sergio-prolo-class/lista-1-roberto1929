@@ -25,11 +25,20 @@ public class App {
 
             double resistencia = (faixa1 * 10 + faixa2) * multiplicador;
 
-            System.out.print("Resistência: " + resistencia + " Ohms");
+        String[] unidades = {"", "k", "M", "G", "T", "P"};
+        int unidade_index = 0;
 
-            if (tolerancia > 0) {
-                System.out.printf(" ( +- %.2f%%)", tolerancia);
-            }
+        while (resistencia >= 1000 && unidade_index < unidades.length - 1) {
+            resistencia /= 1000;
+            unidade_index++;
+        }
+
+        System.out.printf("Resistência: %.2f %s Ohms", resistencia, unidades[unidade_index]);
+
+        if (tolerancia > 0) {
+            System.out.printf(" ( +- %.2f%%)", tolerancia);
+        }
+
     }
 
     private static int get_valor_digito(String cor) {
@@ -79,7 +88,9 @@ public class App {
             case "violeta": return 0.1;
             case "dourado": return 5;
             case "prateado": return 10;
-            default:        return 0;
+            default:
+                System.out.println("A cor '" + cor + "' inválida para a tolerancia");
+                return 0;
         }
     }
 }
