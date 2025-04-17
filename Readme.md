@@ -3,7 +3,7 @@
 
 # Programação Orientada a Objetos
 
-Dupla: Leticia Helena do Rosário Furlan e Roberto da Silva Espindola
+Dupla: Leticia Helena do Rosário Furlan e Roberto da Silva Espindola.
 
 ## Lista 1: Ambiente Java, git e Gradle
 
@@ -13,7 +13,7 @@ Dupla: Leticia Helena do Rosário Furlan e Roberto da Silva Espindola
 - [ ] Exercício 4.
 
 ### Exercício 1
-Para executar este programa inserir no terminal as seguintes opções abaixo e substituir X pelo numero desejado:
+Para executar este programa inserir no terminal as seguintes opções abaixo e substituir o "X", explicadp para cada caso, pelo numero desejado:
 
 ```gradle run --args "triangulo X"``` - (X: altura do triangulo)
 
@@ -23,7 +23,10 @@ Para executar este programa inserir no terminal as seguintes opções abaixo e s
 
 ### Exercício 2
 Para executar este programa insira no terminal:
-No lugar dos "X" inserir as cores dos resistores conforme na tabela abaixo:
+
+```gradle run --args "X X X X"```
+
+No lugar dos "X" inserir as cores dos resistores conforme na tabela abaixo seguindo a ordem de 1º dígito, 2º dígito, multiplicador e tolerância:
 
 | Cor       | 1º Dígito | 2º Dígito | Multiplicador         | Tolerância     |
 |-----------|-----------|-----------|------------------------|----------------|
@@ -42,13 +45,10 @@ No lugar dos "X" inserir as cores dos resistores conforme na tabela abaixo:
 | Nenhuma   | —         | —         | —                      | ±20%           |
 
 
-```gradle run --args "X X X X"```
 
 
 ### Exercício 3
-Para executar este programa basta inserir no terminal para gerar o tabuleiro de batalha naval:
-
-```gradle run```
+Para executar este programa basta inserir no terminal: ```gradle run```, para gerar o tabuleiro de batalha naval.
 
 ### Exercício 4
 
