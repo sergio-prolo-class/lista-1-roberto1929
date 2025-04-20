@@ -10,7 +10,7 @@ public class App {
 
         char[][] tabuleiro = new char[10][10];
         inicializar_tabuleiro(tabuleiro);
-
+     //aqui se posiciona os navios com os seus tamanhos e simbolos
         posicionar_navio_tabuleiro(tabuleiro, 5, 'P');
         posicionar_navio_tabuleiro(tabuleiro, 4, 'E');
         posicionar_navio_tabuleiro(tabuleiro, 3, 'C');
@@ -20,12 +20,12 @@ public class App {
         imprimir_tabuleiro(tabuleiro);
 
     }
-
+    // função feita para posicionar um navio com seu tamanho e simbolo no tabuleiro
     public static void posicionar_navio_tabuleiro(char[][] tabuleiro, int tamanho, char simbolo) {
         Random rand = new Random();
         boolean posicionado = false;
 
-        while (!posicionado) {
+        while (!posicionado) { //este loop roda atpe encontrar uma posicao valida pra um navio
             boolean vertical = rand.nextBoolean();
             int linha = rand.nextInt(10);
             int coluna = rand.nextInt(10);
@@ -41,7 +41,7 @@ public class App {
             }
         }
     }
-    // Verifica se é possível inserir o navio na posição desejada
+    // Verifica se é possível inserir o navio na posição sem desreipeitar os limites do tabuleiro e sem se sobrepor
     public static boolean pode_inserir(char[][] tabuleiro, int linha, int coluna, int tamanho, boolean vertical) {
         if(vertical) {
             if (linha + tamanho > 10) return false;
@@ -51,7 +51,7 @@ public class App {
         } else {
             if (coluna + tamanho > 10) return false;
             for (int i = 0; i < tamanho; i++) {
-                if (tabuleiro[linha][coluna] != '.') return false;
+                if (tabuleiro[linha][coluna + i] != '.') return false;
             }
         }
         return true;
@@ -64,7 +64,7 @@ public class App {
                 tabuleiro[i][j] = '.';
     }
 
-    // imprime o tabuleiro todo formatado
+    // imprime o tabuleiro formatado no terminal
     public static void imprimir_tabuleiro(char[][] tabuleiro) {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {

@@ -8,11 +8,13 @@ public class App {
             System.out.println("Exemplo: gradle run --args vermelho vermelho marrom dourado");
             return;
         }
+
             String cor1 = args[0].toLowerCase();
             String cor2 = args[1].toLowerCase();
             String cor3 = args[2].toLowerCase();
             String cor4 = args[3].toLowerCase();
 
+         //obtem aqui os valores correspondestes das cores inseridas
             int faixa1 = get_valor_digito(cor1);
             int faixa2 = get_valor_digito(cor2);
             double multiplicador = get_multiplicador(cor3);
@@ -21,17 +23,17 @@ public class App {
         if (faixa1 == -1 || faixa2 == -1 || multiplicador == 0) {
             System.out.println("Erro: uma ou mais cores são inválidas.");
             return;
-        }
+        } //verificação de erros das cores
 
-            double resistencia = (faixa1 * 10 + faixa2) * multiplicador;
+        double resistencia = (faixa1 * 10 + faixa2) * multiplicador;
 
-        String[] unidades = {"", "k", "M", "G", "T", "P"};
+        String[] unidades = {"", "k", "M", "G", "T", "P"}; //vetor para representar as unidades do SI
         int unidade_index = 0;
 
         while (resistencia >= 1000 && unidade_index < unidades.length - 1) {
             resistencia /= 1000;
             unidade_index++;
-        }
+        } //neste loop converte o valor da resistencia para a unidade mais proxima
 
         System.out.printf("Resistência: %.2f %s Ohms", resistencia, unidades[unidade_index]);
 
@@ -40,7 +42,7 @@ public class App {
         }
 
     }
-
+    //vai retornar o valor correspondete a cor da faixa 1 ou 2
     private static int get_valor_digito(String cor) {
         switch (cor) {
             case "preto":   return 0;
@@ -58,7 +60,7 @@ public class App {
                 return -1;
         }
     }
-
+    // retorna o valor do multiplicador correspondente a cor selecionada
     private static double get_multiplicador(String cor) {
         switch (cor) {
             case "preto":   return 1;
@@ -78,7 +80,7 @@ public class App {
                 return -1;
         }
     }
-
+  //  retorna a tolerancia com base na cor fornecida
     private static double get_tolerancia(String cor) {
         switch (cor) {
             case "marrom":  return 1;
