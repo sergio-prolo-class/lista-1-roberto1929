@@ -38,7 +38,7 @@ public class App {
         System.out.printf("Resistência: %.2f %s Ohms", resistencia, unidades[unidade_index]);
 
         if (tolerancia > 0) {
-            System.out.printf(" ( +- %.2f%%)", tolerancia);
+            System.out.printf(" ( +- %.2f%%)\n", tolerancia);
         }
 
     }
