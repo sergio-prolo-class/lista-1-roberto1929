@@ -10,7 +10,7 @@ Dupla: Leticia Helena do Rosário Furlan e Roberto da Silva Espindola.
 - [x] Exercício 1;
 - [X] Exercício 2;
 - [X] Exercício 3;
-- [ ] Exercício 4.
+- [X] Exercício 4.
 
 ### Exercício 1
 Para executar este programa inserir no terminal as seguintes opções abaixo e substituir o "X", explicadp para cada caso, pelo numero desejado:
