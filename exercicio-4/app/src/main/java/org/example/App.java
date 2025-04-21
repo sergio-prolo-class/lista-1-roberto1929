@@ -7,6 +7,7 @@ package org.example;
 
 import java.util.Scanner;
 
+
 public class App {
     public static void main(String[] args) {
         char[][] tabuleiro = new char[10][10]; // utilizado da variável char para armazenar o tabuleiro com os navios na matriz 10x10
