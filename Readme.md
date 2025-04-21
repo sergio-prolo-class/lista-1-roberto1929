@@ -52,6 +52,7 @@ Para executar este programa basta inserir no terminal: ```gradle run```, para ge
 
 ### Exercício 4
 
-Para este ultimo exercício, insira no terminal:
 
-```"A terminar"```
+Para este ultimo exercício, insira no terminal:
+gradle run < arquivo.txt
+, o "aquivo.txt" será o arquivo para verificação que utilizaremos, o mesmo deve estar presente na raíz do repositório
