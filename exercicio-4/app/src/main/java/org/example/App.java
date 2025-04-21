@@ -17,7 +17,7 @@ public class App {
         int l = 0;
 
         //Verificação de linhas e colunas
-        while (entrada.hasNextLine()) {
+        while (entrada.hasNextLine() && l < 10) {
             String linha = entrada.nextLine();
             String[] posicao = linha.split(" ");
             //Se a quantidade de colunas for diferente de 10, o tabuleiro é inválido
@@ -34,9 +34,15 @@ public class App {
             l++;
         }
 
-        // se o número de linhas for diferente de 10, o tabuleiro é inválido
-        if (l != 10) {
-            System.out.println("Tabuleiro invalido: numero de linhas incorreto.");
+        // se o número de linhas for menor de 10, o tabuleiro é inválido
+        if (l < 10) {
+            System.out.println("Tabuleiro invalido: menos de 10 linhas encontradas.");
+            return;
+        }
+
+        // se tiver mais linha na entrada apos as 10 linha s que foram lidas
+        if (entrada.hasNextLine()) {
+            System.out.println("Tabuleiro invalido: mais de 10 linhas encontradas.");
             return;
         }
 
