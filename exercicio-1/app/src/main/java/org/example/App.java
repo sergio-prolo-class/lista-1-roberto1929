@@ -10,11 +10,12 @@ public class App {
     public static void main(String[] args) {
 
         String forma;
-
         int tamanho;
         int altura;
         int largura;
 
+
+        //Primeiro é feito a verificação de quantos e quais os argumentos foram passados para podermos seguir o código
         if (args.length == 2) {
             forma = args[0];
             tamanho = Integer.parseInt(args[1]);
@@ -34,7 +35,7 @@ public class App {
             System.out.println("Por favor, passe um parâmetro de linha de comando para começar.");
         }
     }
-    //função que imprime o triangulo retangulo alinhado a direita
+    //função que imprime o triangulo retangulo com base no tamanho fornecido pelo usuario
     public static void imprimeTriangulo(int tamanho) {
 
         for (int i = 1; i <= tamanho; i++) {
@@ -42,7 +43,7 @@ public class App {
             for (int j = 0; j < tamanho - i; j++) {
                 System.out.print("  ");
             }
-            // imprime o numero de estrelas na linha
+            // imprime o numero de asterisco na linha
             for (int j = 1; j <= i; j++) {
                 System.out.print("* ");
             }
@@ -64,7 +65,7 @@ public class App {
             }
         }
     }
-    //função que imprime o retangulo com meio vazio e com altura e largura specificadas
+    //função que imprime o retangulo com meio vazio e com altura e largura especificadas
     public static void imprimeRetangulo(int altura, int largura) {
         for (int i = 0; i < altura; i++) {
             if (i == 0 || i == altura - 1) {
